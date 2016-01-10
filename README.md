@@ -1,20 +1,23 @@
 # Bufu
 
-**TODO: Add description**
+Giant Bomb API client for Elixir. Not useful yet.
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+```elixir
+bufu = Bufu.new(api_key)
+Bufu.Game.get(bufu, 8825)
+```
 
-  1. Add bufu to your list of dependencies in `mix.exs`:
+You can also use a default API key in the system environment (probably the
+application environment too, at some point).
 
-        def deps do
-          [{:bufu, "~> 0.0.1"}]
-        end
+```elixir
+System.put_env("GIANT_BOMB_API_KEY", "abc123")
+Bufu.Game.get(21373)
+```
 
-  2. Ensure bufu is started before your application:
-
-        def application do
-          [applications: [:bufu]]
-        end
-
+## TODO
+1. test, find a request mocking lib?
+2. extract game to generic resource, implement other resources
+3. search endpoint
