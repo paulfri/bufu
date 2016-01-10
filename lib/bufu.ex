@@ -1,0 +1,2 @@
+defmodule Bufu do
+end
