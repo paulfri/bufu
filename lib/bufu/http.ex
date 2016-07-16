@@ -3,9 +3,13 @@ defmodule Bufu.HTTP do
 
   @base_url "http://www.giantbomb.com/api/"
 
-  def get(bufu, endpoint, id) do
+  def fetch(bufu, endpoint, id, opts) do
+    fetch(bufu, endpoint <> "/" <> to_string(id), opts)
+  end
+
+  def fetch(bufu, endpoint, opts) do
     response = bufu
-    |> build_url(endpoint, to_string(id))
+    |> build_url(endpoint, opts)
     |> get
 
     response_body = response.body |> Poison.decode!
@@ -20,19 +24,27 @@ defmodule Bufu.HTTP do
     end
   end
 
-  def get!(bufu, endpoint, id) do
-    case get(bufu, endpoint, id) do
+  def fetch!(bufu, endpoint, id, opts) do
+    fetch!(bufu, endpoint <> "/" <> to_string(id), opts)
+  end
+
+  def fetch!(bufu, endpoint, opts) do
+    case fetch(bufu, endpoint, opts) do
       {:err, message} -> raise message
       {:ok, response} -> response
     end
   end
 
-  defp build_url(bufu, endpoint, id) do
-    bufu |> build_query_string(@base_url <> endpoint <> "/" <> id <> "/")
+  defp build_url(bufu, endpoint, opts) do
+    bufu |> build_query_string(@base_url <> endpoint <> "/", opts)
   end
 
-  defp build_query_string(bufu, url) do
-    url <> "?" <> URI.encode_query(format: "json", api_key: Bufu.api_key(bufu))
+  defp build_query_string(bufu, url, opts) do
+    string = opts
+    |> Keyword.merge(format: "json", api_key: Bufu.api_key(bufu))
+    |> URI.encode_query
+
+    url <> "?" <> string
   end
 
   def process_request_headers(headers) do

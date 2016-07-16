@@ -5,16 +5,22 @@ defmodule Bufu.Resource do
 
       @derive [Poison.Encoder]
 
-      # TODO: safe version (with {:err, reason} return)
-      def get!(id, bufu \\ Bufu.new) do
+      # TODO: safe versions (with {:err, reason} return)
+      def get!(id, query \\ [], bufu \\ Bufu.new) do
         bufu
-        |> HTTP.get!(@endpoint, id)
-        |> parse!
+        |> HTTP.fetch!(@endpoint, id, query)
+        |> parse!(%{"results" => %__MODULE__{}})
       end
 
-      defp parse!(response) do
+      def list!(query \\ [], bufu \\ Bufu.new) do
+        bufu
+        |> HTTP.fetch!(@endpoint <> "s", query)
+        |> parse!(%{"results" => [%__MODULE__{}]})
+      end
+
+      defp parse!(response, format) do
         response
-        |> Poison.decode!(as: %{"results" => %__MODULE__{}})
+        |> Poison.decode!(as: format)
         |> (&(&1["results"])).()
       end
     end
