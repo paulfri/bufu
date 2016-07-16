@@ -9,15 +9,14 @@ defmodule Bufu.Game do
     :description
   ]
 
-  def get(id) do
-    get(Bufu.new, id)
-  end
-
+  def get(id), do: get(Bufu.new, id)
   def get(bufu, id) do
-    Bufu.HTTP.get(bufu, "game", to_string(id)) |> parse
+    bufu
+    |> Bufu.HTTP.get("game", to_string(id))
+    |> parse
   end
 
-  defp parse({status, response}) when status == :ok do
+  defp parse({:ok, response}) do
     {success, parsed_body} = Poison.decode(response, as: %{"results" => Bufu.Game})
     {success, parsed_body["results"]}
   end

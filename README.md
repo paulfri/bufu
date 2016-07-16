@@ -14,7 +14,7 @@ Bufu.Game.get(bufu, 0)
 # => {:err, "Object Not Found"}
 ```
 
-You can also use a default API key in the system environment (probably the application environment too, at some point).
+You can also use a default API key in the application environment or system environment.
 
 ```elixir
 System.put_env("GIANT_BOMB_API_KEY", "abc123")
@@ -22,7 +22,7 @@ Bufu.Game.get(21373)
 ```
 
 ## TODO
-1. test, find a request mocking lib?
-2. extract game to generic resource, implement other resources
-3. associations
-4. search endpoint
+
+1. extract game to generic resource, implement other resources
+2. associations
+3. search endpoint
