@@ -1,4 +1,6 @@
 defmodule Bufu.Game do
+  alias Bufu.HTTP
+
   @derive [Poison.Encoder]
 
   defstruct [
@@ -12,12 +14,12 @@ defmodule Bufu.Game do
   def get(id), do: get(Bufu.new, id)
   def get(bufu, id) do
     bufu
-    |> Bufu.HTTP.get("game", to_string(id))
+    |> HTTP.get("game", to_string(id))
     |> parse
   end
 
   defp parse({:ok, response}) do
-    {success, parsed_body} = Poison.decode(response, as: %{"results" => Bufu.Game})
+    {success, parsed_body} = Poison.decode(response, as: %{"results" => Game})
     {success, parsed_body["results"]}
   end
 

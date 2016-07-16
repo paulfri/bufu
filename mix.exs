@@ -33,9 +33,10 @@ defmodule Bufu.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
+      {:credo, "~> 0.4", only: [:dev, :test]},
+      {:exvcr, "~> 0.7", only: :test},
       {:httpotion, "~> 3.0"},
-      {:poison, "~> 2.2"},
-      {:exvcr, "~> 0.7", only: :test}
+      {:poison, "~> 2.2"}
     ]
   end
 end

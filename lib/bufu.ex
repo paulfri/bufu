@@ -1,7 +1,8 @@
 defmodule Bufu do
   use GenServer
+  alias Mix.Project
 
-  @version Mix.Project.config[:version]
+  @version Project.config[:version]
   def version, do: @version
 
   defmodule Config do
