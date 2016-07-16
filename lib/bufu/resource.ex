@@ -8,7 +8,7 @@ defmodule Bufu.Resource do
       # TODO: safe versions (with {:err, reason} return)
       def get!(id, query \\ [], bufu \\ Bufu.new) do
         bufu
-        |> HTTP.fetch!(@singular, id, add_field_list(query))
+        |> HTTP.fetch!(@singular, resource_id(id), add_field_list(query))
         |> parse!(%{"results" => %__MODULE__{}})
       end
 
@@ -16,6 +16,10 @@ defmodule Bufu.Resource do
         bufu
         |> HTTP.fetch!(@plural, add_field_list(query))
         |> parse!(%{"results" => [%__MODULE__{}]})
+      end
+
+      defp resource_id(id) do
+        to_string(@type_id) <> "-" <> to_string(id)
       end
 
       defp parse!(response, format) do

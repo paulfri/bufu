@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-Agent": "bufu 0.0.1"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://www.giantbomb.com/api/accessory/3000-1/?field_list=api_detail_url%2Cdate_added%2Cdate_last_updated%2Cdeck%2Cdescription%2Cid%2Cimage%2Cname%2Csite_detail_url&format=json&api_key=TEST_API_KEY"
+    },
+    "response": {
+      "body": "{\"error\":\"OK\",\"limit\":1,\"offset\":0,\"number_of_page_results\":1,\"number_of_total_results\":1,\"status_code\":1,\"results\":{\"api_detail_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/accessory\\/3000-1\\/\",\"date_added\":\"2008-05-09 10:18:16\",\"date_last_updated\":\"2010-11-01 12:58:54\",\"deck\":\"The DualShock controller brought dual analog control and force feedback to the original PlayStation and has been used by Sony ever since.\",\"description\":\"<p>The DualShock is the iconic and critically acclaimed <a data-ref-id=\\\"3045-22\\\" href=\\\"\\/playstation\\/3045-22\\/\\\" slug=\\\"playstation\\\">           PlayStation<\\/a> controller on which <a data-ref-id=\\\"3010-3223\\\" href=\\\"\\/sony-corporation\\/3010-3223\\/\\\" slug=\\\"sony-corporation\\\">          Sony<\\/a> has based all of its subsequent controller designs. The DualShock was developed by Sony for use with the original PlayStation and released in <a data-ref-id=\\\"3035-37\\\" href=\\\"\\/japan\\/3035-37\\/\\\" slug=\\\"japan\\\">         Japan<\\/a> in 1997. The PlayStation's original controller lacked analog control and force feedback. The 1999 game <a data-ref-id=\\\"3030-13371\\\" href=\\\"\\/ape-escape\\/3030-13371\\/\\\" slug=\\\"ape-escape\\\">            Ape Escape<\\/a> was the first to require a DualShock for play, and Sony quickly adopted the controller as the PlayStation standard, packing it in with subsequent versions of the console.<br\\/><br\\/>The <a data-ref-id=\\\"3045-19\\\" href=\\\"\\/playstation-2\\/3045-19\\/\\\" slug=\\\"playstation-2\\\">        PlayStation 2<\\/a> version of the DualShock was known as the <a data-ref-id=\\\"3000-30\\\" href=\\\"\\/dualshock-2\\/3000-30\\/\\\" slug=\\\"dualshock-2\\\"> DualShock 2<\\/a>. Though its outward design remained the same (other than a shift from grey to black), the controller integrated pressure-sensitive face and shoulder buttons.<br\\/><br\\/>Sony caused a stir prior to the release of the <a data-ref-id=\\\"3045-35\\\" href=\\\"\\/playstation-3\\/3045-35\\/\\\" slug=\\\"playstation-3\\\">      PlayStation 3<\\/a>, first by showing a radically redesigned DualShock that many commentators derisively described as a <a data-ref-id=\\\"3055-76\\\" href=\\\"\\/boomerang\\/3055-76\\/\\\" slug=\\\"boomerang\\\">       boomerang<\\/a>. The new design was either loved or hated by Playstation 3 followers. This design was scrapped before release, however.<br\\/><br\\/>The original PlayStation 3 release saw the replacement of the DualShock with the <a data-ref-id=\\\"3000-9\\\" href=\\\"\\/sixaxis-controller\\/3000-9\\/\\\" slug=\\\"sixaxis-controller\\\">  SIxaxis<\\/a>, an outwardly identical controller that inwardly lacked force feedback due to an ongoing lawsuit over the vibration copyright with hardware company Immersion. Instead, the Sixaxis featured an accelerometer that sensed motion input. Sony finally released a revised version of the SIxaxis that included force feedback support, not surprisingly dubbed the <a data-ref-id=\\\"3000-29\\\" href=\\\"\\/dualshock-3\\/3000-29\\/\\\" slug=\\\"dualshock-3\\\"> DualShock 3<\\/a>, in 2008. The first software to support DualShock 3 technology was a demo of <a data-ref-id=\\\"3030-20597\\\" href=\\\"\\/gran-turismo-5-prologue\\/3030-20597\\/\\\" slug=\\\"gran-turismo-5-prologue\\\"> Gran Turismo 5 Prologue<\\/a> which was released on the Japanese <a data-ref-id=\\\"3045-88\\\" href=\\\"\\/playstation-network-ps3\\/3045-88\\/\\\" slug=\\\"playstation-network-ps3\\\"> PSN <\\/a>Store\\u00a0on October 20, 2007. \\u00a0Initially, the DualShock 3 controller was released in Japan on November 11, 2007 in black only and didn't reach North America until April 5, 2008 and Europe until July 2, 2008 (UK July 4, 2008). By this point, most existing <a data-ref-id=\\\"3045-35\\\" href=\\\"\\/playstation-3\\/3045-35\\/\\\" slug=\\\"playstation-3\\\"> PlayStation 3<\\/a> titles had been updated to support the controller.\\u00a0<br\\/>\\u00a0<br\\/>The PS3 firmware v1.94 was released to add support for DualShock in <a data-ref-id=\\\"3045-35\\\" href=\\\"\\/playstation-3\\/3045-35\\/\\\" slug=\\\"playstation-3\\\"> PlayStation 3<\\/a> titles and support for compatible <a data-ref-id=\\\"3045-22\\\" href=\\\"\\/playstation\\/3045-22\\/\\\" slug=\\\"playstation\\\"> PSOne<\\/a>\\u00a0and <a data-ref-id=\\\"3045-19\\\" href=\\\"\\/playstation-2\\/3045-19\\/\\\" slug=\\\"playstation-2\\\"> PlayStation 2<\\/a> games was added later in v2.00.<\\/p>\",\"id\":1,\"image\":{\"icon_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/image\\/square_avatar\\/10691-controleps22.GIF\",\"medium_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_medium\\/10691-controleps22.GIF\",\"screen_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/image\\/screen_medium\\/10691-controleps22.GIF\",\"small_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_small\\/10691-controleps22.GIF\",\"super_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_large\\/10691-controleps22.GIF\",\"thumb_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_avatar\\/10691-controleps22.GIF\",\"tiny_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/image\\/square_mini\\/10691-controleps22.GIF\"},\"name\":\"DualShock Controller\",\"site_detail_url\":\"http:\\/\\/www.giantbomb.com\\/dualshock-controller\\/3000-1\\/\"},\"version\":\"1.0\"}",
+      "headers": {
+        "Server": "nginx/1.8.0",
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Powered-By": "PHP/5.6.6",
+        "Date": "Sat, 16 Jul 2016 20:52:32 GMT",
+        "X-Phoenix-Cache-Expires": "07-16-2016 13:57:32",
+        "X-Phoenix-Cached": "false",
+        "Set-Cookie": "device_view=full; expires=Tue, 16-Aug-2016 20:52:32 GMT; Max-Age=2678400; path=/; httponly",
+        "X-Varnish": "732034767",
+        "Age": "0",
+        "Via": "1.1 varnish-v4",
+        "Accept-Ranges": "bytes",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
