@@ -14,13 +14,13 @@ defmodule BufuTest do
 
   test "get list of games" do
     use_cassette "get_games" do
-      games = Bufu.Game.list!
+      games = Bufu.Game.list! limit: 3
       [first | _] = games
 
       assert is_list(games)
       assert is_map(first)
       assert first.name == "Desert Strike: Return to the Gulf"
-      assert length(games) == 100
+      assert length(games) == 3
     end
   end
 end

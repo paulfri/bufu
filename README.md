@@ -23,6 +23,6 @@ System.put_env("GIANT_BOMB_API_KEY", "abc123")
 
 ## TODO
 
-1. extract game to generic resource, implement other resources
-2. associations
+1. associations
+2. sort and filter abstractions
 3. search endpoint

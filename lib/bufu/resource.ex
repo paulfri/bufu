@@ -8,13 +8,13 @@ defmodule Bufu.Resource do
       # TODO: safe versions (with {:err, reason} return)
       def get!(id, query \\ [], bufu \\ Bufu.new) do
         bufu
-        |> HTTP.fetch!(@endpoint, id, query)
+        |> HTTP.fetch!(@singular, id, add_field_list(query))
         |> parse!(%{"results" => %__MODULE__{}})
       end
 
       def list!(query \\ [], bufu \\ Bufu.new) do
         bufu
-        |> HTTP.fetch!(@endpoint <> "s", query)
+        |> HTTP.fetch!(@plural, add_field_list(query))
         |> parse!(%{"results" => [%__MODULE__{}]})
       end
 
@@ -22,6 +22,17 @@ defmodule Bufu.Resource do
         response
         |> Poison.decode!(as: format)
         |> (&(&1["results"])).()
+      end
+
+      # adds a query param to limit fields in the response to only those
+      # contained in the resource struct. not super necessary, but the API
+      # can be kind of slow and this helps a bit
+      defp add_field_list(query) do
+        fields = Map.keys(%__MODULE__{})
+        |> List.delete(:__struct__)
+        |> Enum.join(",")
+
+        Keyword.merge(query, field_list: fields)
       end
     end
   end

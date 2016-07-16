@@ -1,5 +1,6 @@
 defmodule Bufu.Game do
-  @endpoint "game"
+  @singular "game"
+  @plural   "games"
 
   defstruct [
     :id,
