@@ -23,4 +23,15 @@ defmodule Bufu.Franchise do
   ]
 
   use Bufu.Resource
+
+  defp schema do
+    %__MODULE__{
+      characters: [%Bufu.Character{}],
+      concepts: [%Bufu.Concept{}],
+      games: [%Bufu.Game{}],
+      locations: [%Bufu.Location{}],
+      objects: [%Bufu.Object{}],
+      people: [%Bufu.Person{}]
+    }
+  end
 end

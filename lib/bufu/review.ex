@@ -18,4 +18,12 @@ defmodule Bufu.Review do
   ]
 
   use Bufu.Resource
+
+  defp schema do
+    %__MODULE__{
+      game: %Bufu.Game{},
+      platforms: [%Bufu.Platform{}],
+      release: %Bufu.Release{}
+    }
+  end
 end

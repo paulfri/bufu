@@ -27,4 +27,19 @@ defmodule Bufu.Concept do
   ]
 
   use Bufu.Resource
+
+  defp schema do
+    %__MODULE__{
+      characters: [%Bufu.Character{}],
+      concepts: [%Bufu.Concept{}],
+      first_appeared_in_franchise: %Bufu.Franchise{},
+      first_appeared_in_game: %Bufu.Game{},
+      franchises: [%Bufu.Franchise{}],
+      games: [%Bufu.Game{}],
+      locations: [%Bufu.Location{}],
+      objects: [%Bufu.Object{}],
+      people: [%Bufu.Person{}],
+      related_concepts: [%Bufu.Concept{}]
+    }
+  end
 end

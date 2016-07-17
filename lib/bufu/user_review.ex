@@ -16,4 +16,10 @@ defmodule Bufu.UserReview do
   ]
 
   use Bufu.Resource
+
+  defp schema do
+    %__MODULE__{
+      game: %Bufu.Game{}
+    }
+  end
 end

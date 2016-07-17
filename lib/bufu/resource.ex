@@ -3,19 +3,18 @@ defmodule Bufu.Resource do
     quote do
       alias Bufu.HTTP
 
-      @derive [Poison.Encoder]
-
       # TODO: safe versions (with {:err, reason} return)
+      def get!(%__MODULE__{} = resource), do: get!(resource.id)
       def get!(id, query \\ [], bufu \\ Bufu.new) do
         bufu
-        |> HTTP.fetch!(@singular, resource_id(id), add_field_list(query))
-        |> parse!(%{"results" => %__MODULE__{}})
+        |> HTTP.fetch!(@singular, resource_id(id), query)
+        |> parse!(%{"results" => schema})
       end
 
       def list!(query \\ [], bufu \\ Bufu.new) do
         bufu
-        |> HTTP.fetch!(@plural, add_field_list(query))
-        |> parse!(%{"results" => [%__MODULE__{}]})
+        |> HTTP.fetch!(@plural, query)
+        |> parse!(%{"results" => [schema]})
       end
 
       defp resource_id(id) do
@@ -28,16 +27,11 @@ defmodule Bufu.Resource do
         |> (&(&1["results"])).()
       end
 
-      # adds a query param to limit fields in the response to only those
-      # contained in the resource struct. not super necessary, but the API
-      # can be kind of slow and this helps a bit
-      defp add_field_list(query) do
-        fields = Map.keys(%__MODULE__{})
-        |> List.delete(:__struct__)
-        |> Enum.join(",")
-
-        Keyword.merge(query, field_list: fields)
+      defp schema do
+        %__MODULE__{}
       end
+
+      defoverridable [schema: 0]
     end
   end
 end

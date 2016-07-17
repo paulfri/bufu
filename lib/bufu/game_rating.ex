@@ -12,4 +12,10 @@ defmodule Bufu.GameRating do
   ]
 
   use Bufu.Resource
+
+  defp schema do
+    %__MODULE__{
+      rating_board: %Bufu.RatingBoard{},
+    }
+  end
 end

@@ -13,7 +13,7 @@ iex> Bufu.Game.get! 8825
 
 ## TODO
 
-1. associations
+1. safe fetch methods
 2. sort and filter abstractions
 3. search endpoint
 4. documentation

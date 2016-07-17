@@ -35,4 +35,19 @@ defmodule Bufu.Company do
   ]
 
   use Bufu.Resource
+
+  defp schema do
+    %__MODULE__{
+      characters: [%Bufu.Character{}],
+      concepts: [%Bufu.Concept{}],
+      developed_games: [%Bufu.Game{}],
+      developer_releases: [%Bufu.Release{}],
+      distributor_releases: [%Bufu.Release{}],
+      locations: [%Bufu.Location{}],
+      objects: [%Bufu.Person{}],
+      people: [%Bufu.Person{}],
+      published_games: [%Bufu.Game{}],
+      publisher_releases: [%Bufu.Release{}],
+    }
+  end
 end

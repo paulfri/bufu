@@ -18,8 +18,14 @@ defmodule Bufu.Platform do
     :online_support,
     :original_price,
     :release_date,
-    :site_detail_url,
+    :site_detail_url
   ]
 
   use Bufu.Resource
+
+  defp schema do
+    %__MODULE__{
+      company: %Bufu.Company{}
+    }
+  end
 end

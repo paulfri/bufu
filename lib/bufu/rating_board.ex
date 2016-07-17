@@ -17,4 +17,10 @@ defmodule Bufu.RatingBoard do
   ]
 
   use Bufu.Resource
+
+  defp schema do
+    %__MODULE__{
+      region: %Bufu.Region{}
+    }
+  end
 end

@@ -18,4 +18,11 @@ defmodule Bufu.Location do
   ]
 
   use Bufu.Resource
+
+
+  defp schema do
+    %__MODULE__{
+      first_appeared_in_game: %Bufu.Game{}
+    }
+  end
 end

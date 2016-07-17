@@ -30,4 +30,18 @@ defmodule Bufu.Character do
   ]
 
   use Bufu.Resource
+
+  def schema do
+    %__MODULE__{
+      concepts: [%Bufu.Concept{}],
+      enemies: [%Bufu.Character{}],
+      first_appeared_in_game: %Bufu.Game{},
+      franchises: [%Bufu.Franchise{}],
+      friends: [%Bufu.Character{}],
+      games: [%Bufu.Game{}],
+      locations: [%Bufu.Location{}],
+      objects: [%Bufu.Object{}],
+      people: [%Bufu.Person{}]
+    }
+  end
 end

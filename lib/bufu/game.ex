@@ -46,4 +46,31 @@ defmodule Bufu.Game do
   ]
 
   use Bufu.Resource
+
+  defp schema do
+    %__MODULE__{
+      characters: [%Bufu.Character{}],
+      concepts: [%Bufu.Concept{}],
+      developers: [%Bufu.Company{}],
+      first_appearance_characters: [%Bufu.Character{}],
+      first_appearance_concepts: [%Bufu.Concept{}],
+      first_appearance_locations: [%Bufu.Location{}],
+      first_appearance_objects: [%Bufu.Person{}],
+      first_appearance_people: [%Bufu.Person{}],
+      franchises: [%Bufu.Franchise{}],
+      genres: [%Bufu.Genre{}],
+      killed_characters: [%Bufu.Character{}],
+      locations: [%Bufu.Location{}],
+      objects: [%Bufu.Person{}],
+      original_game_rating: [%Bufu.GameRating{}],
+      people: [%Bufu.Person{}],
+      platforms: [%Bufu.Platform{}],
+      publishers: [%Bufu.Company{}],
+      releases: [%Bufu.Release{}],
+      reviews: [%Bufu.Review{}],
+      similar_games: [%Bufu.Game{}],
+      themes: [%Bufu.Theme{}],
+      videos: [%Bufu.Video{}]
+    }
+  end
 end
