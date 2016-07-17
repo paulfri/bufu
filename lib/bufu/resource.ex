@@ -26,7 +26,7 @@ defmodule Bufu.Resource do
           Bufu.Game.get(1) |> Map.get(:similar_games) |> hd |> Bufu.Game.load
           {:ok, %{Bufu.Game ...}
       """
-      def load(%__MODULE__{} = resource, bufu \\ Bufu.new), do: get(resource.id, bufu)
+      def load(%__MODULE__{id: id}, bufu \\ Bufu.new), do: get(id, [], bufu)
 
       @doc """
       Retrieve a resource by passing in a previously-loaded `resource` of the
@@ -34,7 +34,7 @@ defmodule Bufu.Resource do
 
       See `load/2`.
       """
-      def load!(%__MODULE__{} = resource, bufu \\ Bufu.new), do: get!(resource.id, bufu)
+      def load!(%__MODULE__{id: id}, bufu \\ Bufu.new), do: get!(id, [], bufu)
 
       @doc """
       Retrieves the resource by `id`.
