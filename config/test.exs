@@ -1,5 +1,7 @@
 use Mix.Config
 
+config :bufu, :api_key, "test"
+
 config :exvcr, [
   vcr_cassette_library_dir: "fixture/vcr",
   filter_sensitive_data: [
