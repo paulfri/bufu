@@ -10,6 +10,7 @@ defmodule Bufu.UserReview do
     :deck,
     :description,
     :game,
+    :id,
     :reviewer,
     :score,
     :site_detail_url

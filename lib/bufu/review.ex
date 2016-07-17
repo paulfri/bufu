@@ -9,6 +9,7 @@ defmodule Bufu.Review do
     :description,
     :dlc_name,
     :game,
+    :id,
     :platforms,
     :publish_date,
     :release,

@@ -1,37 +1,35 @@
 defmodule Bufu.HTTP do
   use HTTPotion.Base
+  alias Poison.Parser
 
   @base_url "http://www.giantbomb.com/api/"
 
-  def fetch(bufu, endpoint, id, opts) do
-    fetch(bufu, endpoint <> "/" <> to_string(id), opts)
-  end
-
+  def fetch(bufu, endpoint, id, opts), do: fetch(bufu, endpoint <> "/" <> to_string(id), opts)
   def fetch(bufu, endpoint, opts) do
-    response = bufu
+    bufu
     |> build_url(endpoint, opts)
     |> get
-
-    response_body = response.body |> Poison.decode!
-
-    # http://www.giantbomb.com/api/documentation#toc-0-0
-    case response_body["status_code"] do
-      1 ->
-        # return unparsed body, so we can decode as a record
-        {:ok, response.body}
-      _ ->
-        {:err, response_body["error"]}
-    end
+    |> parse_response
   end
 
-  def fetch!(bufu, endpoint, id, opts) do
-    fetch!(bufu, endpoint <> "/" <> to_string(id), opts)
-  end
-
+  def fetch!(bufu, endpoint, id, opts), do: fetch!(bufu, endpoint <> "/" <> to_string(id), opts)
   def fetch!(bufu, endpoint, opts) do
     case fetch(bufu, endpoint, opts) do
       {:err, message} -> raise message
       {:ok, response} -> response
+    end
+  end
+
+  defp parse_response(%HTTPotion.ErrorResponse{} = e), do: {:err, "HTTP error: #{e.message}"}
+  defp parse_response(%{status_code: 401}), do: {:err, "Invalid API key"}
+  defp parse_response(%{status_code: 404}), do: {:err, "Endpoint not found"}
+  defp parse_response(%{status_code: 200} = response) do
+    with result <- Parser.parse!(response.body) do
+      # http://www.giantbomb.com/api/documentation#toc-0-0
+      case result["status_code"] do
+        1 -> {:ok,  response.body}
+        _ -> {:err, result["error"]}
+      end
     end
   end
 

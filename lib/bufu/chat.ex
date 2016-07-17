@@ -7,6 +7,7 @@ defmodule Bufu.Chat do
     :api_detail_url,
     :channel_name,
     :deck,
+    :id,
     :image,
     :password,
     :site_detail_url,
