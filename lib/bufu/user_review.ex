@@ -1,4 +1,11 @@
 defmodule Bufu.UserReview do
+  @moduledoc """
+  Resource representing a Giant Bomb user's review of a game. Editorial reviews
+  are represented by a different resource, `Bufu.Review`.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-42).
+  """
+
   @type_id  2200
   @singular "user_review"
   @plural   "user_reviews"

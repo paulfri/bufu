@@ -1,4 +1,10 @@
 defmodule Bufu.Region do
+  @moduledoc """
+  Resource representing a release region (e.g., the United States).
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-32).
+  """
+
   @type_id  3075
   @singular "region"
   @plural   "regions"

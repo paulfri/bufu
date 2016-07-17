@@ -1,4 +1,10 @@
 defmodule Bufu.Location do
+  @moduledoc """
+  Resource representing a location in a game.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-20).
+  """
+
   @type_id  3035
   @singular "location"
   @plural   "locations"

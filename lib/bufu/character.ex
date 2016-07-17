@@ -1,4 +1,10 @@
 defmodule Bufu.Character do
+  @moduledoc """
+  Resource representing a video game character.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-4).
+  """
+
   @type_id  3005
   @singular "character"
   @plural   "characters"

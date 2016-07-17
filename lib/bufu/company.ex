@@ -1,4 +1,10 @@
 defmodule Bufu.Company do
+  @moduledoc """
+  Resource representing a video game company (mostly developers and publishers).
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-8).
+  """
+
   @type_id  3010
   @singular "company"
   @plural   "companies"

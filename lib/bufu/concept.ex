@@ -1,4 +1,10 @@
 defmodule Bufu.Concept do
+  @moduledoc """
+  Resource representing a concept.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-10).
+  """
+
   @type_id  3015
   @singular "concept"
   @plural   "concepts"

@@ -23,6 +23,7 @@ defmodule Bufu.Mixfile do
   defp deps do
     [
       {:credo, "~> 0.4", only: [:dev, :test]},
+      {:ex_doc, "~> 0.12", only: :dev},
       {:exvcr, "~> 0.7", only: :test},
       {:httpotion, "~> 3.0"},
       {:poison, "~> 2.2"}

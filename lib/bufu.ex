@@ -6,6 +6,8 @@ defmodule Bufu do
   def version, do: @version
 
   defmodule Config do
+    @moduledoc false
+
     defstruct [:api_key]
   end
 

@@ -1,4 +1,11 @@
 defmodule Bufu.Release do
+  @moduledoc """
+  Resource representing a game release. Games can have many releases, including
+  remasters, regional differences, physical or digital, etc.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-34).
+  """
+
   @type_id  3050
   @singular "release"
   @plural   "releases"

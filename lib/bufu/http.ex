@@ -1,4 +1,6 @@
 defmodule Bufu.HTTP do
+  @moduledoc false
+
   use HTTPotion.Base
   alias Poison.Parser
 

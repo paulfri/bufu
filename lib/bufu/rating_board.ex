@@ -1,4 +1,10 @@
 defmodule Bufu.RatingBoard do
+  @moduledoc """
+  Resource representing a game rating board.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-30).
+  """
+
   @type_id  3070
   @singular "rating_board"
   @plural   "rating_boards"

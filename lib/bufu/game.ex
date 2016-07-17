@@ -1,4 +1,10 @@
 defmodule Bufu.Game do
+  @moduledoc """
+  Resource representing a game.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-14).
+  """
+
   @type_id  3030
   @singular "game"
   @plural   "games"

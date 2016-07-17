@@ -1,4 +1,10 @@
 defmodule Bufu.Genre do
+  @moduledoc """
+  Resource representing a genre.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-18).
+  """
+
   @type_id  3060
   @singular "genre"
   @plural   "genres"

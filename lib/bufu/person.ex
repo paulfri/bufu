@@ -1,4 +1,11 @@
 defmodule Bufu.Person do
+  @moduledoc """
+  Resource representing a (real) person credited in a game. Includes developers,
+  artists, musicians, executives, etc.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-24).
+  """
+
   @type_id  3040
   @singular "person"
   @plural   "people"

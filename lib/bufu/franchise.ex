@@ -1,4 +1,10 @@
 defmodule Bufu.Franchise do
+  @moduledoc """
+  Resource representing a game franchise.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-12).
+  """
+
   @type_id  3025
   @singular "franchise"
   @plural   "franchises"

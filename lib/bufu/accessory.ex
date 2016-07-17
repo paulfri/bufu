@@ -1,4 +1,10 @@
 defmodule Bufu.Accessory do
+  @moduledoc """
+  Resource representing a video game (hardware) accessory.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-2).
+  """
+
   @type_id  3000
   @singular "accessory"
   @plural   "accessories"

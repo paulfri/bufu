@@ -1,4 +1,10 @@
 defmodule Bufu.Object do
+  @moduledoc """
+  Resource representing an object in a game.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-22).
+  """
+
   @type_id  3055
   @singular "object"
   @plural   "objects"

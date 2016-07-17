@@ -1,4 +1,11 @@
 defmodule Bufu.Platform do
+  @moduledoc """
+  Resource representing a game platform, such as a console. Digital distribution
+  networks are listed separately for some older platforms.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-26).
+  """
+
   @type_id  3045
   @singular "platform"
   @plural   "platforms"

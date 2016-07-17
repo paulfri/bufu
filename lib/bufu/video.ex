@@ -1,4 +1,10 @@
 defmodule Bufu.Video do
+  @moduledoc """
+  Resource representing a Giant Bomb video.
+
+  See the [official documentation](http://www.giantbomb.com/api/documentation#toc-0-44).
+  """
+
   @type_id  2300
   @singular "video"
   @plural   "videos"
