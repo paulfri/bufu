@@ -5,7 +5,6 @@ defmodule BufuTest.Resource do
 
   test_resource Bufu.Accessory, id: 1, name: "DualShock Controller"
   test_resource Bufu.Character, id: 6115, name: "Chie Satonaka"
-  test_resource Bufu.Chat, id: 633, title: "EVO 2016 Las Vegas!"
   test_resource Bufu.Company, id: 442, name: "Atlus Co., Ltd."
   test_resource Bufu.Concept, id: 904, name: "Fog"
   test_resource Bufu.Franchise, id: 2830, name: "Persona 4"
