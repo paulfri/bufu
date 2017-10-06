@@ -17,7 +17,7 @@ defmodule Bufu.VideoShow do
     :api_detail_url,
     :deck,
     :id,
-    :name,
+    :title,
     :site_detail_url
   ]
 

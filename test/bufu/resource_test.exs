@@ -22,5 +22,5 @@ defmodule BufuTest.Resource do
   test_resource Bufu.Theme, id: 13, name: "Crime"
   test_resource Bufu.UserReview, id: 20564, deck: "130 hours."
   test_resource Bufu.Video, id: 11434, user: "drewbert"
-  test_resource Bufu.VideoShow, id: 3, name: "Quick Looks"
+  test_resource Bufu.VideoShow, id: 29, title: "Metal Gear Scanlon"
 end
