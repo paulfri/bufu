@@ -3,28 +3,29 @@
     "request": {
       "body": "",
       "headers": {
-        "User-Agent": "bufu 0.0.1"
+        "User-Agent": "bufu 0.1.0"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "http://www.giantbomb.com/api/rating_boards/?limit=2&field_list=api_detail_url%2Cdate_added%2Cdate_last_updated%2Cdeck%2Cdescription%2Cid%2Cimage%2Cname%2Cregion%2Csite_detail_url&format=json&api_key=TEST_API_KEY"
+      "url": "https://www.giantbomb.com/api/rating_boards/?limit=2&format=json&api_key=TEST_API_KEY"
     },
     "response": {
-      "body": "{\"error\":\"OK\",\"limit\":2,\"offset\":0,\"number_of_page_results\":2,\"number_of_total_results\":6,\"status_code\":1,\"results\":[{\"api_detail_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/rating_board\\/3070-1\\/\",\"date_added\":\"2008-04-03 11:22:23\",\"date_last_updated\":\"2008-05-10 15:48:41\",\"deck\":\"North American Rating Board\",\"description\":null,\"id\":1,\"image\":null,\"name\":\"ESRB\",\"site_detail_url\":null},{\"api_detail_url\":\"http:\\/\\/www.giantbomb.com\\/api\\/rating_board\\/3070-2\\/\",\"date_added\":\"2008-04-03 11:22:53\",\"date_last_updated\":\"2008-05-10 15:48:41\",\"deck\":\"European Rating Board\",\"description\":null,\"id\":2,\"image\":null,\"name\":\"PEGI\",\"site_detail_url\":null}],\"version\":\"1.0\"}",
+      "body": "{\"error\":\"OK\",\"limit\":2,\"offset\":0,\"number_of_page_results\":2,\"number_of_total_results\":6,\"status_code\":1,\"results\":[{\"api_detail_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/rating_board\\/3070-1\\/\",\"date_added\":\"2008-04-03 11:22:23\",\"date_last_updated\":\"2008-05-10 15:48:41\",\"deck\":\"North American Rating Board\",\"description\":null,\"id\":1,\"image\":{\"icon_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/square_avatar\\/2853576-gblogo.png\",\"medium_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_medium\\/2853576-gblogo.png\",\"screen_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/screen_medium\\/2853576-gblogo.png\",\"screen_large_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/screen_kubrick\\/2853576-gblogo.png\",\"small_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_small\\/2853576-gblogo.png\",\"super_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_large\\/2853576-gblogo.png\",\"thumb_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_avatar\\/2853576-gblogo.png\",\"tiny_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/square_mini\\/2853576-gblogo.png\"},\"name\":\"ESRB\",\"site_detail_url\":null},{\"api_detail_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/rating_board\\/3070-2\\/\",\"date_added\":\"2008-04-03 11:22:53\",\"date_last_updated\":\"2008-05-10 15:48:41\",\"deck\":\"European Rating Board\",\"description\":null,\"id\":2,\"image\":{\"icon_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/square_avatar\\/2853576-gblogo.png\",\"medium_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_medium\\/2853576-gblogo.png\",\"screen_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/screen_medium\\/2853576-gblogo.png\",\"screen_large_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/screen_kubrick\\/2853576-gblogo.png\",\"small_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_small\\/2853576-gblogo.png\",\"super_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_large\\/2853576-gblogo.png\",\"thumb_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/scale_avatar\\/2853576-gblogo.png\",\"tiny_url\":\"https:\\/\\/www.giantbomb.com\\/api\\/image\\/square_mini\\/2853576-gblogo.png\"},\"name\":\"PEGI\",\"site_detail_url\":null}],\"version\":\"1.0\"}",
       "headers": {
-        "Server": "nginx/1.8.0",
+        "Server": "nginx/1.10.1",
         "Content-Type": "application/json; charset=utf-8",
         "X-Powered-By": "PHP/5.6.6",
-        "Date": "Sat, 16 Jul 2016 20:52:42 GMT",
-        "X-Phoenix-Cache-Expires": "07-16-2016 13:57:42",
+        "Set-Cookie": "sat=2634359ff839fa309a551876e916ba59; path=/; domain=.giantbomb.com; HttpOnly",
+        "Cache-Control": "no-cache",
+        "Date": "Fri, 06 Oct 2017 21:55:19 GMT",
+        "X-Phoenix-Cache-Expires": "10-06-2017 15:00:19",
         "X-Phoenix-Cached": "false",
-        "Set-Cookie": "device_view=full; expires=Tue, 16-Aug-2016 20:52:42 GMT; Max-Age=2678400; path=/; httponly",
-        "X-Varnish": "738954921",
+        "X-Varnish": "921736479",
         "Age": "0",
         "Via": "1.1 varnish-v4",
         "Accept-Ranges": "bytes",
-        "Transfer-Encoding": "chunked",
+        "Content-Length": "2082",
         "Connection": "keep-alive"
       },
       "status_code": 200,
