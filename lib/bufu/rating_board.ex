@@ -18,15 +18,8 @@ defmodule Bufu.RatingBoard do
     :id,
     :image,
     :name,
-    :region,
     :site_detail_url
   ]
 
   use Bufu.Resource
-
-  defp schema do
-    %__MODULE__{
-      region: %Bufu.Region{}
-    }
-  end
 end
