@@ -49,7 +49,7 @@ defmodule Bufu.Resource do
           _   ->
             bufu
             |> HTTP.fetch(@singular, resource_id(id), query)
-            |> parse(%{"results" => schema})
+            |> parse(%{"results" => schema()})
         end
       end
 
@@ -64,7 +64,7 @@ defmodule Bufu.Resource do
           _   ->
             bufu
             |> HTTP.fetch!(@singular, resource_id(id), query)
-            |> parse!(%{"results" => schema})
+            |> parse!(%{"results" => schema()})
         end
       end
 
@@ -78,7 +78,7 @@ defmodule Bufu.Resource do
       def list(query \\ [], bufu \\ Bufu.new) do
         bufu
         |> HTTP.fetch(@plural, query)
-        |> parse(%{"results" => [schema]})
+        |> parse(%{"results" => [schema()]})
       end
 
       @doc """
@@ -89,7 +89,7 @@ defmodule Bufu.Resource do
       def list!(query \\ [], bufu \\ Bufu.new) do
         bufu
         |> HTTP.fetch!(@plural, query)
-        |> parse!(%{"results" => [schema]})
+        |> parse!(%{"results" => [schema()]})
       end
 
       defp resource_id(id) do

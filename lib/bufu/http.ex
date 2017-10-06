@@ -48,6 +48,7 @@ defmodule Bufu.HTTP do
   end
 
   def process_request_headers(headers) do
-    Dict.put(headers, :"User-Agent", "bufu #{Bufu.version}")
+    headers
+    |> Keyword.put(:"User-Agent", "bufu #{Bufu.version}")
   end
 end
