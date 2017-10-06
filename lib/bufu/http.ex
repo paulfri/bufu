@@ -4,7 +4,7 @@ defmodule Bufu.HTTP do
   use HTTPotion.Base
   alias Poison.Parser
 
-  @base_url "http://www.giantbomb.com/api/"
+  @base_url "https://www.giantbomb.com/api/"
 
   def fetch(bufu, endpoint, id, opts), do: fetch(bufu, endpoint <> "/" <> to_string(id), opts)
   def fetch(bufu, endpoint, opts) do
